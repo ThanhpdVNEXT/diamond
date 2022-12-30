@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThanhpdVNEXT/diamond.git"
+  },
   "dependencies": {
     "@line/liff": "^2.21.4",
     "@next/font": "13.1.1",

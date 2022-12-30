@@ -1,32 +1,32 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import {  useEffect, useState } from 'react';
-import liff from '@line/liff';
+import type { Liff } from "@line/liff";
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [liffObject, setLiffObject] = useState<any>(null);
-  const [liffError, setLiffError] = useState<any>(null);
 
-    // Execute liff.init() when the app is initialized
-    useEffect(() => {
-      // to avoid `window is not defined` error
-  
-        liff.init({ liffId: process.env.LIFF_ID || '' })
+  const [liffObject, setLiffObject] = useState<Liff | null>(null);
+  const [liffError, setLiffError] = useState<string | null>(null);
+  // Execute liff.init() when the app is initialized
+  useEffect(() => {
+    // to avoid `window is not defined` error
+    import("@line/liff")
+      .then((liff) => liff.default)
+      .then((liff) => {
+        console.log("LIFF init...");
+        liff
+          .init({ liffId: process.env.NEXT_PUBLIC_LIFF_ID! })
           .then(() => {
-            console.log("liff.init() done");
+            console.log("LIFF init succeeded.");
             setLiffObject(liff);
           })
-          .catch((error: { toString: () => any; }) => {
-            console.log(`liff.init() failed: ${error}`);
-            if (!process.env.liffId) {
-              console.info(
-                "LIFF Starter: Please make sure that you provided `LIFF_ID` as an environmental variable."
-              );
-            }
+          .catch((error: Error) => {
+            console.log("LIFF init failed.");
             setLiffError(error.toString());
           });
-    }, []);
+      });
+  }, []);
 
    // Provide `liff` object and `liffError` object
   // to page component as property
