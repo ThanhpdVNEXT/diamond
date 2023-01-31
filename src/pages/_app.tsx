@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import {  useEffect, useState } from 'react';
 import type { Liff } from "@line/liff";
+import Footer from '@/components/layouts/Footer';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -33,5 +34,10 @@ export default function App({ Component, pageProps }: AppProps) {
   pageProps.liff = liffObject;
   pageProps.liffError = liffError;
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  )
 }

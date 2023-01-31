@@ -7,7 +7,8 @@ export const navbar = css`
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  border-top: 1px solid #5db075;
 `;
 
 export const active = (isActive = false) => css`
@@ -18,9 +19,12 @@ export const active = (isActive = false) => css`
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  :hover {
-    background-color: #ddd;
-    color: black;
-  }
-  ${isActive && "background-color: #04aa6d; color: white;"}
+  ${isActive && "color: #5DB075;"}
+`;
+
+export const linkMenu = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 `;
