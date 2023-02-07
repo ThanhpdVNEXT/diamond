@@ -10,3 +10,10 @@ export const container = css`
   margin-right: auto;
   margin-left: auto;
 `;
+
+export const titleNotifi = (check:boolean = true) => css`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: ${check ? "var(--base-color)" : ""};
+`

@@ -18,11 +18,12 @@ export const inputBox = css`
   padding-left: calc(0.5em - 1px);
   padding-right: calc(0.5em - 1px);
   height: auto;
+  width: inherit;
   color: #bdbdbd !important;
   ::placeholder {
     color: #bdbdbd;
     opacity: 1;
-  };
+  }
   ::-webkit-search-cancel-button {
     -webkit-appearance: none;
     height: 1em;
@@ -33,15 +34,15 @@ export const inputBox = css`
     background-size: contain;
     opacity: 0;
     pointer-events: none;
-  };
+  }
   :focus::-webkit-search-cancel-button {
-    opacity: .3;
+    opacity: 0.3;
     pointer-events: all;
   }
 `;
 
-export const inputImg = (color = "white") => css`
-  background: ${color};
+export const inputImg = (color = "--input-color") => css`
+  background: var(${color});
   border-radius: 2px;
   padding: 0.2em calc(0.5em - 1px);
   position: absolute;
@@ -68,11 +69,16 @@ export const outlineBox = css`
   }
 `;
 
-export const iconBox = (color = "red") => css`
+export const iconBox = (color = "white") => css`
   background: ${color};
   padding: calc(0.5em - 1px);
   border-radius: 15px;
   border: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // export const inputBox = css`

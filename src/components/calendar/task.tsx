@@ -3,7 +3,7 @@ type propTask = {
 }
 const Task = (props: any) => {
   return (
-    <div className="container">
+    <div className="container mw-60">
       <ul className="timeline">
         <li className="task">
           <div className="bd-task">

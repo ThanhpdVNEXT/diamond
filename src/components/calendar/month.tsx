@@ -99,7 +99,7 @@ const Month = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container mw-60">
         <div className="row">
           <div className="center">
             <FontAwesomeIcon icon={faCaretLeft} onClick={decreaseMonth}/>

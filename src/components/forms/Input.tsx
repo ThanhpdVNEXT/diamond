@@ -14,15 +14,18 @@ import { Button, Input, Value } from "@/common/model/input";
 type typeInput = {
   value?: Value;
   placeholder?: string;
-  icon?: IconDefinition | undefined;
-  color?: string | undefined;
+  icon?: IconDefinition;
+  color?: string;
   typeBtn?: Button;
   typeInput?: Input;
+  className?: string;
+  colorBtn?: string;
+  colorIcon?: string;
 };
 
 const Input = (type: typeInput) => {
   return (
-    <div css={inputImg(type?.color)}>
+    <div css={inputImg(type?.color)} className={type?.className}>
       {type?.typeInput == "textarea" ? (
         <textarea
           css={inputBox}
@@ -38,8 +41,8 @@ const Input = (type: typeInput) => {
         />
       )}
       <span css={outlineBox}></span>
-      <button css={iconBox()} type={type.typeBtn || "button"}>
-        <FontAwesomeIcon icon={type?.icon || faMagnifyingGlass} />
+      <button css={iconBox(type?.colorBtn)} type={type.typeBtn || "button"}>
+        <FontAwesomeIcon icon={type?.icon || faMagnifyingGlass} color={type?.colorIcon} />
       </button>
     </div>
   );

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.date {
+  width: 70%;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.date h2 {
+  margin: 0;
+  padding: 0;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.date h1 {
+  font-size: 1.3em;
+  margin: 5px auto;
+}
+
+.calendar {
+  margin: 5px 10px 10px;
+  padding: 0px 10px;
+}
+
+.day {
+  margin: 5px;
+  padding: 8px;
+  width: calc(100% / 7);
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.weekdays div {
+  color: #555;
+  font-weight: 400;
+}
+
+.difference-month {
+  color: #aaa;
+  font-weight: 400;
+}
+
+.current {
+  color: var(--base-color) !important;
+}
+
+.cal-task {
+  position: relative;
+}
+
+.cal-task:before {
+  content: "";
+  position: absolute;
+  left: 48%;
+  right: 48%;
+  bottom: -0.1em;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: 50%;
+  background-color: var(--base-color);
+}
+
+.timeline {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+.task {
+  list-style: none;
+  position: relative;
+  padding: 15px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.title {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--base-color);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col-left {
+  width: calc(65% - 16px);
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.col-right {
+  width: 35%;
+  text-align: end;
+}
+
+.center {
+  padding-top: 1rem;
+  margin: 5px 10px 10px;
+  text-align: center;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.cal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.day > div {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.day > div.today {
+  background: #f0e3b4;
+}
+
+.name-date {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 20px;
+  width: 45%;
+}
+
+.link-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link-hr {
+  height: 5px;
+  border: none;
+}
+
+.link-name {
+  font-size: 12px;
+}

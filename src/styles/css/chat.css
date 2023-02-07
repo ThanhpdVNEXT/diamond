@@ -1,0 +1,61 @@
+.bubbleWrapper {
+  padding: 10px 10px 2px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: #fff;
+  font-size: 14px;
+}
+.inlineContainer {
+  display: inline-flex;
+}
+.inlineContainer.own {
+  flex-direction: row-reverse;
+}
+.ownBubble {
+  min-width: 60px;
+  max-width: 700px;
+  padding: 14px 18px;
+  margin: 6px 8px;
+  margin-left: 20%;
+  background-color: #5DB075;
+  border-radius: 10px 10px 0 10px;
+  -webkit-border-radius: 10px 10px 0 10px;
+  -moz-border-radius: 10px 10px 0 10px;
+  -ms-border-radius: 10px 10px 0 10px;
+  -o-border-radius: 10px 10px 0 10px;
+}
+.otherBubble {
+  min-width: 60px;
+  max-width: 700px;
+  padding: 14px 18px;
+  margin: 6px 8px;
+  margin-right: 20%;
+  background-color: #F6F6F6;
+  border-radius: 10px 10px 10px 0;
+  border: 1px solid #E8E8E8;
+  color: black;
+  -webkit-border-radius: 10px 10px 10px 0;
+  -moz-border-radius: 10px 10px 10px 0;
+  -ms-border-radius: 10px 10px 10px 0;
+  -o-border-radius: 10px 10px 10px 0;
+}
+.own {
+  align-self: flex-end;
+}
+.other {
+  align-self: flex-start;
+}
+/* span.own,
+span.other {
+  font-size: 14px;
+  color: grey;
+} */
+
+.input-chat {
+  width: 96%;
+  position: fixed;
+  bottom: calc(68px + 15px);
+  margin: 0 2%;
+}
