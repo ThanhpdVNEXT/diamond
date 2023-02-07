@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         liff
           .init({ liffId: process.env.NEXT_PUBLIC_LIFF_ID! })
           .then(() => {
-            console.log("LIFF init succeeded.");
+            console.log("LIFF init succeeded.=>", liff);
             setLiffObject(liff);
           })
           .catch((error: Error) => {

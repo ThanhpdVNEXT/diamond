@@ -1,15 +1,8 @@
-import Input from "@/components/forms/Input";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Page = () => {
   return (
     <div>
-      <Input
-        placeholder="Login"
-        color="green"
-        icon={faCheck}
-        typeInput="text"
-      />
+      <iframe src="https://craft-garden.shop/" width={"100%"} height={'100%'} ></iframe>
     </div>
   );
 };
