@@ -1,5 +1,3 @@
-import { Message } from "@line/bot-sdk";
-
 const API_LINE = "https://api.line.me/"
 
 export const AUTH = {
